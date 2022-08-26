@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container" style="padding:40px;">
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleFormControlInput1"> Enter the Product Name</label>
+    <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Product Name">
+  </div>
+    <div class="form-group">
+    <label for="exampleFormControlInput"> Enter the Product Description</label>
+    <input type="text" name="desc" class="form-control" id="exampleFormControlInput" placeholder="Description">
+  </div>
+    <div class="form-group">
+    <label for="exampleFormControlInpu"> Enter MRP</label>
+    <input type="number" name="mrp" class="form-control" id="exampleFormControlInpu" placeholder="MRP">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInp"> Enter the Deal Price</label>
+    <input type="text" name="price" class="form-control" id="exampleFormControlInp" placeholder="Deal">
+  </div>
+  <div class="form-group" style="padding-top:10px;padding-bottom:30px;">
+    <label for="exampleFormControlFile1">Image of the product</label>
+    <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+</form>
+</div>
+{% endblock %}
